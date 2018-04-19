@@ -1,0 +1,14 @@
+D:\Desktop\University\Information_systems_in_management\EC_402\EC_402\bin\Release\EC_402.exe.config
+D:\Desktop\University\Information_systems_in_management\EC_402\EC_402\bin\Release\EC_402.exe
+D:\Desktop\University\Information_systems_in_management\EC_402\EC_402\bin\Release\EC_402.pdb
+D:\Desktop\University\Information_systems_in_management\EC_402\EC_402\obj\Release\MainWindow.g.cs
+D:\Desktop\University\Information_systems_in_management\EC_402\EC_402\obj\Release\App.g.cs
+D:\Desktop\University\Information_systems_in_management\EC_402\EC_402\obj\Release\EC_402_MarkupCompile.cache
+D:\Desktop\University\Information_systems_in_management\EC_402\EC_402\obj\Release\EC_402_MarkupCompile.lref
+D:\Desktop\University\Information_systems_in_management\EC_402\EC_402\obj\Release\MainWindow.baml
+D:\Desktop\University\Information_systems_in_management\EC_402\EC_402\obj\Release\EC_402.g.resources
+D:\Desktop\University\Information_systems_in_management\EC_402\EC_402\obj\Release\EC_402.Properties.Resources.resources
+D:\Desktop\University\Information_systems_in_management\EC_402\EC_402\obj\Release\EC_402.csproj.GenerateResource.cache
+D:\Desktop\University\Information_systems_in_management\EC_402\EC_402\obj\Release\EC_402.csproj.CoreCompileInputs.cache
+D:\Desktop\University\Information_systems_in_management\EC_402\EC_402\obj\Release\EC_402.exe
+D:\Desktop\University\Information_systems_in_management\EC_402\EC_402\obj\Release\EC_402.pdb

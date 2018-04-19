@@ -1,0 +1,89 @@
+﻿<Window x:Class="EC402.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EC402"
+        mc:Ignorable="d"
+        Title="Electricity Calculator" Height="406.378" Width="626.414" ResizeMode="NoResize">
+    <Grid>
+        <TabControl x:Name="tabControl" Margin="10,10,0,0" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+            <TabItem x:Name="tabPageRegion" Header="Region">
+                <Grid Background="#FFE5E5E5" Margin="0,-1,0.5,1">
+                    <Button x:Name="buttonBegining" Content="Next" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="74" Click="buttonBegining_Click"/>
+                    <Label x:Name="labelStart" Content="Для точного расчета введите регион, в котором проживаете:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="349"/>
+                    <ComboBox x:Name="comboBoxRegions" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="349">
+                        <ComboBoxItem Content="г. Киев"/>
+                        <ComboBoxItem Content="Волынская область"/>
+                        <ComboBoxItem Content="Винницкая область"/>
+                        <ComboBoxItem Content="Днепропетровская область"/>
+                        <ComboBoxItem Content="Донецкая область"/>
+                        <ComboBoxItem Content="Житомирская область"/>
+                        <ComboBoxItem Content="Закарпатская область"/>
+                        <ComboBoxItem Content="Запорожская область"/>
+                        <ComboBoxItem Content="Ивано-Франсовская область"/>
+                        <ComboBoxItem Content="Киевская область"/>
+                        <ComboBoxItem Content="Кировоградская область"/>
+                        <ComboBoxItem Content="Луганская область"/>
+                        <ComboBoxItem Content="Львовская область"/>
+                        <ComboBoxItem Content="Николаевская область"/>
+                        <ComboBoxItem Content="Одесская область"/>
+                        <ComboBoxItem Content="Полтавская область"/>
+                        <ComboBoxItem Content="Ровенская область"/>
+                        <ComboBoxItem Content="Сумская область"/>
+                        <ComboBoxItem Content="Тернопольская область"/>
+                        <ComboBoxItem Content="Харьковская область"/>
+                        <ComboBoxItem Content="Херсонская область"/>
+                        <ComboBoxItem Content="Хмельницкая область"/>
+                        <ComboBoxItem Content="Черкасская область"/>
+                        <ComboBoxItem Content="Черниговская область"/>
+                        <ComboBoxItem Content="Черновицкая область"/>
+                    </ComboBox>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabPageRate" Header="Exchange rate">
+                <Grid Background="#FFE5E5E5" Margin="0,-4,0.5,4">
+                    <Label x:Name="labelExchangeRate" Content="Введите текощий курс доллара:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="187" Margin="10,0,0,0"/>
+                    <TextBox x:Name="textBoxExchangeRate" HorizontalAlignment="Left" Height="23" Margin="10,31,0,0" TextWrapping="Wrap" Text="24,15" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="buttonCancel" Content="Back" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="74" Margin="0,0,89,10" Click="buttonBack_Click"/>
+                    <Button x:Name="buttonNext" Content="Next" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="74" Click="buttonNext_Click"/>
+                    <TextBox x:Name="textBoxEuro" HorizontalAlignment="Left" Height="23" Margin="10,89,0,0" TextWrapping="Wrap" Text="31,683" VerticalAlignment="Top" Width="120"/>
+                    <Label x:Name="labeEuro" Content="Введите текущий курс евро:" HorizontalAlignment="Left" Margin="10,63,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.411,0.483"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabPageConsumption" Header="Electricity consumption">
+                <Grid Background="#FFE5E5E5" Margin="0,0,0,0.5">
+                    <Button x:Name="buttonFinish" Content="Finish" HorizontalAlignment="Right" Margin="0,0,10.5,10" VerticalAlignment="Bottom" Width="74" Click="buttonFinish_Click"/>
+                    <Button x:Name="buttonBack" Content="Back" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="74" Margin="0,0,89.5,10" Click="buttonBacktoRates_Click"/>
+                    <Label x:Name="labelChoose" Content="Выберете способ расчета среднего потребления энергии:" HorizontalAlignment="Left" Margin="130,10,0,0" VerticalAlignment="Top"/>
+                    <GroupBox x:Name="groupBoxPeople" Header="По количеству людей:" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.218,-0.07" Height="87" Width="234">
+                        <Grid HorizontalAlignment="Left" Height="171" Margin="10,10,0,0" VerticalAlignment="Top" Width="225">
+                            <Label x:Name="labelPeople" Content="Введите количество людей:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+                            <TextBox x:Name="textBoxPeople" HorizontalAlignment="Left" Height="23" Margin="10,26,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox x:Name="groupBoxRooms" Header="По количеству комнат:" HorizontalAlignment="Left" Height="87" Margin="310,61,0,0" VerticalAlignment="Top" Width="282">
+                        <Grid HorizontalAlignment="Left" Height="169" Margin="10,10,-2,0" VerticalAlignment="Top" Width="261">
+                            <Label x:Name="labelRooms" Content="Введите количество жилых комнат:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+                            <TextBox x:Name="textBoxRooms" HorizontalAlignment="Left" Height="23" Margin="10,31,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="120"/>
+                        </Grid>
+                    </GroupBox>
+                    <RadioButton x:Name="radioButtonPeople" Content="По количеству людей на жилплощади:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Checked="radioButtonPeople_Checked"/>
+                    <RadioButton x:Name="radioButtonRooms" Content="По количеству комнат:" HorizontalAlignment="Left" Margin="368,41,0,0" VerticalAlignment="Top" Checked="radioButtonRooms_Checked"/>
+                    <GroupBox x:Name="groupBoxConsumption" Header="По количеству людей:" HorizontalAlignment="Left" Margin="10,187,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.218,-0.07" Height="130" Width="385">
+                        <Grid HorizontalAlignment="Left" Height="120" Margin="10,10,-2,-23" VerticalAlignment="Top" Width="365">
+                            <Label x:Name="labelMaxConsumption" Content="Введите максимальное потребление електроэнергии в месяц" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="351"/>
+                            <TextBox x:Name="textBoxMaxConsumption" HorizontalAlignment="Left" Height="23" Margin="10,26,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
+                            <TextBox x:Name="textBoxAverageConsumption" HorizontalAlignment="Left" Height="23" Margin="10,72,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
+                        </Grid>
+                    </GroupBox>
+                    <RadioButton x:Name="radioButtonConsumption" Content="Ручной ввод среднего потребления енергии " HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top" Checked="radioButtonConsumption_Checked"/>
+                    <Label x:Name="labelAverageConsumption" Content="Введите среднее потребление електроэнергии в месяц" HorizontalAlignment="Left" Margin="44,261,0,0" VerticalAlignment="Top" Width="351"/>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
